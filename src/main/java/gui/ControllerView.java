@@ -92,7 +92,8 @@ public class ControllerView implements Initializable {
      * Hiển thị tất cả nhân vật lịch sử
      * @param event
      */
-    public void searchCharacter(ActionEvent event) {
+    @SuppressWarnings("exports")
+	public void searchCharacter(ActionEvent event) {
         modelsObservableList.removeAll(modelsObservableList);
         modelsObservableList.addAll(listCharacter);
         listView.scrollTo(0);
@@ -102,7 +103,8 @@ public class ControllerView implements Initializable {
      * Hiển thị tất cả triều đại lịch sử
      * @param event
      */
-    public void searchDynasty(ActionEvent event) {
+    @SuppressWarnings("exports")
+	public void searchDynasty(ActionEvent event) {
         modelsObservableList.removeAll(modelsObservableList);
         modelsObservableList.addAll(listDynasty);
         listView.scrollTo(0);
@@ -112,7 +114,8 @@ public class ControllerView implements Initializable {
      * Hiển thị tất cả sự kiện lịch sử
      * @param event
      */
-    public void searchEvent(ActionEvent event) {
+    @SuppressWarnings("exports")
+	public void searchEvent(ActionEvent event) {
         modelsObservableList.removeAll(modelsObservableList);
         modelsObservableList.addAll(listEvent);
         listView.scrollTo(0);
@@ -122,7 +125,8 @@ public class ControllerView implements Initializable {
      * Hiển thị tất cả lễ hội
      * @param event
      */
-    public void searchFestival(ActionEvent event) {
+    @SuppressWarnings("exports")
+	public void searchFestival(ActionEvent event) {
         modelsObservableList.removeAll(modelsObservableList);
         modelsObservableList.addAll(listFestival);
         listView.scrollTo(0);
@@ -132,7 +136,8 @@ public class ControllerView implements Initializable {
      * Hiển thị tất cả di tích lịch sử
      * @param event
      */
-    public void searchPlace(ActionEvent event) {
+    @SuppressWarnings("exports")
+	public void searchPlace(ActionEvent event) {
         modelsObservableList.removeAll(modelsObservableList);
         modelsObservableList.addAll(listPlace);
         listView.scrollTo(0);
@@ -144,7 +149,8 @@ public class ControllerView implements Initializable {
      * @param event
      * @throws IOException
      */
-    public void detailModel(Event event) throws IOException {
+    @SuppressWarnings("exports")
+	public void detailModel(Event event) throws IOException {
         // get stage
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -179,7 +185,8 @@ public class ControllerView implements Initializable {
      * @param columns cột chứa từ khóa cần tìm
      * @return các đối tượng có chứa từ khóa
      */
-    public ArrayList<Models> listSearchResult(String key, String... columns) {
+    @SuppressWarnings("exports")
+	public ArrayList<Models> listSearchResult(String key, String... columns) {
         ArrayList<Models> result = new ArrayList<>();
         StringBuilder avoidRepeating = new StringBuilder();
         for (String column : columns) {
@@ -213,7 +220,8 @@ public class ControllerView implements Initializable {
      * Tìm kiếm với thanh tìm kiếm
      * @param event
      */
-    public void searchButton(ActionEvent event) {
+    @SuppressWarnings("exports")
+	public void searchButton(ActionEvent event) {
         String key = searchTextField.getText();
 
         listSuggestions.removeAll(listSuggestions);
@@ -235,7 +243,8 @@ public class ControllerView implements Initializable {
      * Gợi ý tìm kiếm
      * @param event
      */
-    public void pressKeyTextField(KeyEvent event) {
+    @SuppressWarnings("exports")
+	public void pressKeyTextField(KeyEvent event) {
         String key = searchTextField.getText().trim();
         if (key.length() > 0) {
             resultSuggestionsModels = listSearchResult(key,  "name");
@@ -252,7 +261,8 @@ public class ControllerView implements Initializable {
      * Lựa chọn gợi ý tìm kiếm với phím mũi tên
      * @param event
      */
-    public void textFieldUpDown(KeyEvent event) {
+    @SuppressWarnings("exports")
+	public void textFieldUpDown(KeyEvent event) {
         if (event.getCode() == KeyCode.UP) {
             if (searchSuggestions.getSelectionModel().getSelectedItem() != null) {
                 searchSuggestions.getSelectionModel().selectPrevious();
@@ -291,7 +301,8 @@ public class ControllerView implements Initializable {
      * Nếu ấn ENTER, tìm kiếm với gợi ý đã chọn
      * @param event
      */
-    public void refreshSearchTextField(KeyEvent event) {
+    @SuppressWarnings("exports")
+	public void refreshSearchTextField(KeyEvent event) {
         Models selected = searchSuggestions.getSelectionModel().getSelectedItem();
         searchTextField.setText(selected.getName());
         if (event.getCode() == KeyCode.ENTER) {
@@ -308,7 +319,8 @@ public class ControllerView implements Initializable {
      * @param event
      * @throws IOException
      */
-    public void checkEnterListView(KeyEvent event) throws IOException {
+    @SuppressWarnings("exports")
+	public void checkEnterListView(KeyEvent event) throws IOException {
         if (event.getCode() == KeyCode.ENTER) {
             detailModel(event);
         }
@@ -318,7 +330,8 @@ public class ControllerView implements Initializable {
      * Chọn kết quả tìm kếm đầu tiên
      * @param event
      */
-    public void selectFirst(ActionEvent event) {
+    @SuppressWarnings("exports")
+	public void selectFirst(ActionEvent event) {
         listView.getSelectionModel().selectFirst();
     }
 
@@ -326,7 +339,8 @@ public class ControllerView implements Initializable {
      * Chọn kết quả tìm kếm cuối cùng
      * @param event
      */
-    public void selectLast(ActionEvent event) {
+    @SuppressWarnings("exports")
+	public void selectLast(ActionEvent event) {
         listView.getSelectionModel().selectLast();
     }
 
@@ -334,7 +348,8 @@ public class ControllerView implements Initializable {
      * Chọn kết quả tìm kếm phía trên
      * @param event
      */
-    public void selectPrevious(ActionEvent event) {
+    @SuppressWarnings("exports")
+	public void selectPrevious(ActionEvent event) {
         listView.getSelectionModel().selectPrevious();
     }
 
@@ -342,7 +357,8 @@ public class ControllerView implements Initializable {
      * Chọn kết quả tìm kếm phía dưới
      * @param event
      */
-    public void selectNext(ActionEvent event) {
+    @SuppressWarnings("exports")
+	public void selectNext(ActionEvent event) {
         listView.getSelectionModel().selectNext();
     }
 
@@ -350,7 +366,8 @@ public class ControllerView implements Initializable {
      * Bỏ chọn đối tượng tại danh sách tìm kiếm
      * @param event
      */
-    public void clearSelection(ActionEvent event) {
+    @SuppressWarnings("exports")
+	public void clearSelection(ActionEvent event) {
         listView.scrollTo(0);
         listView.getSelectionModel().clearSelection();
     }

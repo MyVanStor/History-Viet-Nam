@@ -7,7 +7,6 @@ module com.example.demo {
     requires com.jfoenix;
     requires org.jsoup;
 
-
     opens gui to javafx.fxml;
     exports gui;
 }

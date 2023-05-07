@@ -18,7 +18,8 @@ public class ControllerMenu {
      * @param event
      * @throws IOException
      */
-    public void crawlAndUpdateData(ActionEvent event) throws IOException {
+    @SuppressWarnings("exports")
+	public void crawlAndUpdateData(ActionEvent event) throws IOException {
         // crawl
         Crawl.run();
 
@@ -57,7 +58,8 @@ public class ControllerMenu {
      * @param event
      * @throws IOException
      */
-    public void start(ActionEvent event) throws IOException {
+    @SuppressWarnings("exports")
+	public void start(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add(Main.class.getResource("stylesheet.css").toExternalForm());

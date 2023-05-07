@@ -25,7 +25,8 @@ public class CrawlPlaceNKS extends Crawler{
      * @param url
      * @throws IOException
      */
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void scrapePage(String url) throws IOException{
         Document doc;
         try {

@@ -48,7 +48,8 @@ public class CrawlPlaceWiki extends Crawler{
      * @param table
      * @throws IOException
      */
-    public void scrapeTable(Element table) throws IOException{
+    @SuppressWarnings("unchecked")
+	public void scrapeTable(Element table) throws IOException{
         Elements rows = table.select("tbody > tr");
         for (int i = 1 ; i < rows.size(); i++){
             JSONObject obj = new JSONObject();
@@ -85,7 +86,8 @@ public class CrawlPlaceWiki extends Crawler{
      * Do bảng này có cấu trúc khác bảng khác nên làm một phương thức riêng
      * @param table
      */
-    public void scrape22thTable(Element table){
+    @SuppressWarnings("unchecked")
+	public void scrape22thTable(Element table){
         Elements rows = table.select("tbody > tr");
         for (int i = 1 ; i < rows.size(); i++){
             JSONObject obj = new JSONObject();

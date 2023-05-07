@@ -37,7 +37,8 @@ public class ControllerDetail {
      * Thiết lập thông tin cho đối tượng được hiển thị
      * @param model đối tượng muốn hiển thị
      */
-    public void setModel(Models model) {
+    @SuppressWarnings("exports")
+	public void setModel(Models model) {
         this.idLabel.setText(model.getId());
         this.nameLabel.setText(model.getName());
         this.infoText.setText(model.getInfo());
@@ -53,7 +54,8 @@ public class ControllerDetail {
      * @param event
      * @throws IOException
      */
-    public void backHome(ActionEvent event) throws IOException {
+    @SuppressWarnings("exports")
+	public void backHome(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         FXMLLoader loader = new FXMLLoader();

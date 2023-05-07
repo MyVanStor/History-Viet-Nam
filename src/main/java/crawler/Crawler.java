@@ -10,7 +10,6 @@ import org.jsoup.select.Elements;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.UnknownHostException;
 import java.util.*;
 
 /**
@@ -86,7 +85,8 @@ public class Crawler {
      * @return info
      * @throws IOException
      */
-    public String scrapeInformation(List<String> urls, String css) throws IOException{
+    @SuppressWarnings("unused")
+	public String scrapeInformation(List<String> urls, String css) throws IOException{
         String info = "";
         Document doc;
         try {

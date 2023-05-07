@@ -25,7 +25,8 @@ public class CrawlFestivalWiki extends Crawler {
      * @param url
      * @throws IOException
      */
-    public void scrapePage(String url) throws IOException {
+    @SuppressWarnings("unchecked")
+	public void scrapePage(String url) throws IOException {
         Document doc;
         try {
             doc = Jsoup.connect(url).userAgent("Jsoup client").timeout(20000).get();
