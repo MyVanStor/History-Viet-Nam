@@ -27,7 +27,6 @@ import java.util.ResourceBundle;
 public class ControllerView implements Initializable {
     @FXML
     private ListView<Models> listView;
-
     @FXML
     private ListView<Models> searchSuggestions;
 

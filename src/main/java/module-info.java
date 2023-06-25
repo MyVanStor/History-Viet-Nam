@@ -6,7 +6,6 @@ module com.example.demo {
     requires json.simple;
     requires com.jfoenix;
     requires org.jsoup;
-
     opens gui to javafx.fxml;
     exports gui;
 }

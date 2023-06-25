@@ -28,6 +28,7 @@
                   <Insets top="1.0" />
                </VBox.margin>
             </JFXButton>
+          
             <JFXButton alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#start" prefHeight="50.0" prefWidth="400.0" styleClass="button-menu" text="Tra thông tin" textFill="WHITE">
                <font>
                   <Font name="Ebrima" size="16.0" />
